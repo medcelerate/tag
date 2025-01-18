@@ -316,6 +316,10 @@ func (m metadataMP4) Album() string {
 	return m.getString(atoms.Name("album"))
 }
 
+func (m metadataMP4) BPM() int {
+	return m.getInt([]string{"tmpo"})
+}
+
 func (m metadataMP4) AlbumArtist() string {
 	return m.getString(atoms.Name("album_artist"))
 }
